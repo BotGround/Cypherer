@@ -5,7 +5,7 @@ const fs = require('fs')
 const wait = require('util').promisify(setTimeout);
 client.commands = new Collection();
 
-client.login("");
+client.login("OTI1NzYyNzczMzMyNDE4NTYw.Ycx1xQ.hEpxz7BAOO-WK-nc8TglMlOG0UQ");
 
 const fileComandi = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
@@ -22,8 +22,8 @@ client.once('ready', () => {
 client.on('messageCreate', async (message) =>{
     if(message.content == "c!registra"){
         const data = {
-            name: 'atbash',
-            description: 'Atbash encripting',
+            name: 'kenny',
+            description: 'Kenny code encripting',
             options: [
                 {
                     name: 'text',
