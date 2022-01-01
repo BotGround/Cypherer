@@ -1,13 +1,13 @@
-const morse = require("../config/morse.json")
+const atbash = require("../config/atbash.json")
 const { letterTrans } = require(`custom-translate`)
 
 module.exports = {
     data: {
-        name: "morse",
-        description: "Morse encripting"
+        name: "atbash",
+        description: "Atbash encripting"
     },
     async execute(interaction) {
         let text = interaction.options.getString('text').toLowerCase();
-        interaction.reply({ content: `${letterTrans(text, morse)}` })
+        interaction.reply({ content: `${letterTrans(text, atbash)}` })
     }
 }

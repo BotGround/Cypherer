@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/TheCasalegno/Cypherer#readme",
   "dependencies": {
+    "custom-translate": "^2.2.8",
     "discord.js": "^13.5.0",
     "fs": "^0.0.1-security"
   }
