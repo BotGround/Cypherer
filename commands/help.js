@@ -61,6 +61,7 @@ module.exports = {
                     .setFooter(`Requested by ${user.tag}`, user.displayAvatarURL())
                     .setTimestamp()
                     .setColor("#4F646F")
+                    .setImage("https://i.postimg.cc/ZRSTNSX2/how-to-use.gif")
                 await i.update({embeds: [embedHowTo], components: [row]})
             }
         })
