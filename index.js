@@ -5,7 +5,7 @@ const fs = require('fs')
 const wait = require('util').promisify(setTimeout);
 client.commands = new Collection();
 
-client.login("OTI1NzYyNzczMzMyNDE4NTYw.Ycx1xQ.AjevoeE-DZhV8yTxnx6lDoXqjac");
+client.login(process.env.token);
 
 const fileComandi = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
