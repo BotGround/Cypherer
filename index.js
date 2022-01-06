@@ -5,7 +5,7 @@ const fs = require('fs')
 const wait = require('util').promisify(setTimeout);
 client.commands = new Collection();
 
-client.login(process.env.token);
+client.login("OTI1NzYyNzczMzMyNDE4NTYw.Ycx1xQ.AjevoeE-DZhV8yTxnx6lDoXqjac");
 
 const fileComandi = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
@@ -22,16 +22,8 @@ client.once('ready', () => {
 client.on('messageCreate', async (message) =>{
     if(message.content == "c!registra"){
         const data = {
-            name: 'kenny',
-            description: 'Kenny code encripting',
-            options: [
-                {
-                    name: 'text',
-                    description: 'Insert a text',
-                    type: 'STRING',
-                    required: true,
-                }
-            ]
+            name: 'links',
+            description: 'Links of Cypherer',
         };
         const comando = await client.application?.commands.create(data);
         console.log(comando)
