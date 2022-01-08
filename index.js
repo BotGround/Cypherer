@@ -1,11 +1,12 @@
 const { error } = require('console');
-const { Client, Collection, Intents} = require('discord.js')
+const { Client, Collection, Intents, DiscordAPIError} = require('discord.js')
+const Discord = require('discord.js');
 const client =  new Client({ intents: [Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILDS]});
 const fs = require('fs')
 const wait = require('util').promisify(setTimeout);
 client.commands = new Collection();
 
-client.login(process.env.token);
+client.login("OTI1NzYyNzczMzMyNDE4NTYw.Ycx1xQ.ARanV2h1er40oWrbuAW60sdKN4w");
 
 const fileComandi = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
@@ -22,8 +23,16 @@ client.once('ready', () => {
 client.on('messageCreate', async (message) =>{
     if(message.content == "c!registra"){
         const data = {
-            name: 'links',
-            description: 'Links of Cypherer',
+            name: 'rot',
+            description: 'ROT13 encrypting',
+            options: [
+                {
+                    name: 'text',
+                    description: 'Insert a text',
+                    type: 'STRING',
+                    required: true,
+                }
+            ]
         };
         const comando = await client.application?.commands.create(data);
         console.log(comando)
@@ -39,6 +48,6 @@ client.on('interactionCreate', async (interaction) =>{
         await client.commands.get(nomeComando).execute(interaction)
     } catch (error) {
         console.error(error);
-        await interaction.reply({content: "Something went wrong", ephemeral: true })
+        await interaction.reply({content: ":x: Sorry, something went **wrong** :x:", ephemeral: true })
     }
 })
