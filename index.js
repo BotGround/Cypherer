@@ -6,7 +6,7 @@ const fs = require('fs')
 const wait = require('util').promisify(setTimeout);
 client.commands = new Collection();
 
-client.login("OTI1NzYyNzczMzMyNDE4NTYw.Ycx1xQ.ARanV2h1er40oWrbuAW60sdKN4w");
+client.login(process.env.token);
 
 const fileComandi = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
@@ -18,10 +18,12 @@ for (const file of fileComandi) {
 client.once('ready', () => {
     console.log("----Cypherer Online----")
     client.user.setActivity('/ for help', { type: 'LISTENING' });
+    client.user.setStatus('idle')
 });
 
 client.on('messageCreate', async (message) =>{
     if(message.content == "c!registra"){
+        if(message.user.id == "821044835862839330") {
         const data = {
             name: 'rot',
             description: 'ROT13 encrypting',
@@ -36,6 +38,9 @@ client.on('messageCreate', async (message) =>{
         };
         const comando = await client.application?.commands.create(data);
         console.log(comando)
+        }else{
+            interaction.reply({content: ":x: Sorry, you are not **allowed** to use this command :x:", ephemeral: true })
+        }
     }
 })
 
