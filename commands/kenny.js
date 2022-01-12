@@ -1,6 +1,6 @@
 const kenny = require("../config/kenny.json")
 const { letterTrans } = require(`custom-translate`)
-
+const Discord = require("discord.js")
 module.exports = {
     data: {
         name: "kenny",

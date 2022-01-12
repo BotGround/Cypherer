@@ -1,5 +1,6 @@
 const rot = require("../config/rot.json")
 const { letterTrans } = require(`custom-translate`)
+const Discord = require("discord.js")
 
 module.exports = {
     data: {

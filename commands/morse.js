@@ -1,6 +1,6 @@
 const morse = require("../config/morse.json")
 const { letterTrans } = require(`custom-translate`)
-
+const Discord = require("discord.js")
 module.exports = {
     data: {
         name: "morse",
