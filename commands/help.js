@@ -9,8 +9,6 @@ module.exports = {
         description: "Help of commands"
     },
     async execute(interaction) {
-        var user = interaction.user
-        if(user.id == "821044835862839330") {
         const row = new Discord.MessageActionRow()
 			.addComponents(
 				new Discord.MessageButton()
@@ -46,6 +44,7 @@ module.exports = {
                     .addField("**Morse** - `/morse [text]`", "Morse is a communication code consisting of short and long signals, which are broadcasted with short intervals. More informations [here](https://botground.ga/cypherer/info/morse)", false)
                     .addField("**Atbash** - `/atbash [text]`", "The atbash cipher is a simple substitution cipher for the Hebrew alphabet. More informations [here](https://botground.ga/cypherer/info/atbash)", false)
                     .addField("**Kenny code** - `/kenny [text]`", "Encode your text in Kenny code from Southpark. More informations [here](https://botground.ga/cypherer/info/kenny)", false)
+                    .addField("**ROT 13** - `/rot [text]`", "The Caesar cipher or shift cipher method uses a simple substitution encryption. This means that every character is substituted by another character according to a specific system. More informations [here](https://botground.ga/cypherer/info/rot)", false)
                     .setFooter(`Requested by ${user.tag}`, user.displayAvatarURL())
                     .setTimestamp()
                     .setColor("#4F646F")
@@ -65,13 +64,5 @@ module.exports = {
                 await i.update({embeds: [embedHowTo], components: [row]})
             }
         })
-    } else {
-        const embedEvent = new Discord.MessageEmbed()
-            .setAuthor({ name: 'Cypherer - Coming soon...', iconURL: 'https://iili.io/YMpe9f.md.png' })
-            .setDescription('<:Stage:929440782023266364> The bot will be available again after the [BotGround Public Launch](https://discord.gg/3BTc3Ezz?event=929437079295909929). Stay up to date and run to follow the event! Join the [community](https://discord.com/invite/cYySBAeJYb) to find out more.')
-    
-
-        interaction.reply({content: 'https://discord.gg/PXnj3ceCBM?event=929437079295909929', embeds: [embedEvent]})
-    }
     }
 }

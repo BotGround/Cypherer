@@ -18,7 +18,7 @@ for (const file of fileComandi) {
 client.once('ready', () => {
     console.log("----Cypherer Online----")
     client.user.setActivity('/ for help', { type: 'LISTENING' });
-    client.user.setStatus('idle')
+    client.user.setStatus('Online')
 });
 
 client.on('messageCreate', async (message) =>{
