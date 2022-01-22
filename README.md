@@ -5,3 +5,7 @@
 Encrypt text with **Cypherer**: *morse*, *ROT* and many other cypher all in one Discord bot
 
 >My prefix is **/**
+
+[Invite me!](https://cypherer.ga/invite)
+
+[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/bfu3.svg)](https://betteruptime.com/?utm_source=status_badge)
