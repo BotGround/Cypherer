@@ -9,6 +9,7 @@ module.exports = {
         description: "Help of commands"
     },
     async execute(interaction) {
+        var user = interaction.user
         const row = new Discord.MessageActionRow()
 			.addComponents(
 				new Discord.MessageButton()
